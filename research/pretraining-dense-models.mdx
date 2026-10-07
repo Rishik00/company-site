@@ -68,6 +68,8 @@ Figure 1. Final zero-shot scores for the four checkpoints on all nine benchmarks
 
 The sections below follow the order we ran the experiments: pretraining first, then the downstream and diagnostic experiments.
 
+The code is on [GitHub](https://github.com/Mercity-AI/MoE-Runs) and the pretrained checkpoints are on [Hugging Face](https://huggingface.co/collections/Mercity/pretrain-checkpoints).
+
 ## Why do this?
 
 New architecture ideas keep arriving from frontier labs, and they are almost always validated on very large models: wide, sparse, and trained on tens of billions of tokens or more. We wanted to know how these state-of-the-art techniques behave when you train a small language model instead, with an academic token budget and a single GPU. To test that, we picked two recent examples: Kimi Delta Attention (KDA), a linear-attention layer introduced in [Kimi Linear](https://arxiv.org/abs/2510.26692) and used in the [Kimi K3](https://arxiv.org/abs/2607.24653) mixture-of-experts model, and the [LongCat n-gram embedding tables](https://arxiv.org/abs/2601.21204), reported on **20B to 60B** parameter models. We have not found published results for either on a dense model near 1B parameters, so these runs report new numbers.
